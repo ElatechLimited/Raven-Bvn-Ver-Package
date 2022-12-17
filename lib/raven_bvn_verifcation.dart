@@ -11,8 +11,8 @@ class RavenVer {
   static Future<Map<String, dynamic>> bvnVerifcation(
       {required BuildContext context,
       required String bvn,
-      required String appToken,
-      required String authToken,
+      required String userToken,
+      required String secretKey,
       String poweredBy = "",
       String assetLogo = "",
       int compressQualityiOS = 70,
@@ -29,7 +29,7 @@ class RavenVer {
       // ignore: use_build_context_synchronously
       _showDialog(context);
       try {
-        var response = await _serverVer(path, bvn, appToken, authToken);
+        var response = await _serverVer(path, bvn, userToken, secretKey);
         // ignore: use_build_context_synchronously
         Navigator.pop(context);
         return response;

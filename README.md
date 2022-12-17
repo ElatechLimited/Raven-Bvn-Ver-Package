@@ -1,4 +1,4 @@
-# BVN_VEERIFICATION
+# BVN_VERIFICATION
 
 A new Flutter package for verifying BVN.
 
@@ -18,17 +18,18 @@ import 'package:Raven_BVN_VERF/raven_bvn_verifcation.dart';
 //and call and await the function to return server response in Map 
                 
                 
-               try {
-                    value = await RavenVer.bvnVerifcation(
-                      appToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                      context: context,
-                      authToken: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
-                      bvn: "1000000001",
-                      assetLogo: "assets/raven_logo_white.png",
-                    );
-                  } catch (ex) {
-                    print(ex.toString());
-                  }
+             try {
+                  value = await RavenVer.bvnVerifcation(
+                    userToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    context: context,
+                    secretKey: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
+                    bvn: "1000000001",
+                    assetLogo: "assets/raven_logo_white.png",
+                  );
+                  print(value);
+                } catch (ex) {
+                  print(ex.toString());
+                }
 
  
 ```
@@ -63,9 +64,8 @@ and run the command 'pod install'
 
 
 ```dart
-// ignore_for_file: avoid_print
-// ignore_for_file: avoid_print
-// ignore_for_file: avoid_print
+
+ 
 
 import 'package:flutter/material.dart';
 import 'package:raven_bvn_ver/raven_bvn_verifcation.dart';
@@ -97,9 +97,9 @@ class _RevenApp extends State<RevenApp> {
               onPressed: () async {
                 try {
                   value = await RavenVer.bvnVerifcation(
-                    appToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    userToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     context: context,
-                    authToken: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
+                    secretKey: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
                     bvn: "1000000001",
                     assetLogo: "assets/raven_logo_white.png",
                   );
@@ -114,6 +114,7 @@ class _RevenApp extends State<RevenApp> {
     );
   }
 }
+
 
 
 ```
