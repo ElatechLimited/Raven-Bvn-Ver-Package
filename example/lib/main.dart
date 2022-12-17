@@ -5,18 +5,18 @@ import 'package:raven_bvn_ver/raven_bvn_verifcation.dart';
 
 //flutter pub pub publish --dry-run
 void main() {
-  runApp(const MaterialApp(home: BVNVerification()));
+  runApp(const MaterialApp(home: RevenApp()));
 }
 
-class BVNVerification extends StatefulWidget {
-  const BVNVerification({Key? key}) : super(key: key);
+class RevenApp extends StatefulWidget {
+  const RevenApp({Key? key}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
-    return _BVNVerification();
+    return _RevenApp();
   }
 }
 
-class _BVNVerification extends State<BVNVerification> {
+class _RevenApp extends State<RevenApp> {
   Map<String, dynamic> value = {};
 
   @override
@@ -25,7 +25,7 @@ class _BVNVerification extends State<BVNVerification> {
       body: SizedBox(
         width: double.infinity,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          const Text("Press The Button To Take Photo"),
+          const Text("Press The Button To Verify BVN"),
           ElevatedButton(
               onPressed: () async {
                 try {
@@ -41,7 +41,7 @@ class _BVNVerification extends State<BVNVerification> {
                   print(ex.toString());
                 }
               },
-              child: const Text("Click Me"))
+              child: const Text("Start Verification"))
         ]),
       ),
     );
