@@ -11,7 +11,7 @@ class RavenVer {
   static Future<Map<String, dynamic>> bvnVerifcation(
       {required BuildContext context,
       required String bvn,
-      required String userToken,
+      String userToken = "",
       required String secretKey,
       String poweredBy = "",
       String assetLogo = "",

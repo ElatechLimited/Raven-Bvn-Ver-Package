@@ -30,7 +30,6 @@ class _RevenApp extends State<RevenApp> {
               onPressed: () async {
                 try {
                   value = await RavenVer.bvnVerifcation(
-                    userToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     context: context,
                     secretKey: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
                     bvn: "1000000001",
