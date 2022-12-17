@@ -1,6 +1,6 @@
 name: raven_bvn_ver
 description: A flutter package for bvn verification
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ElatechLimited/Raven-Bvn-Ver-Package
 
 environment:
