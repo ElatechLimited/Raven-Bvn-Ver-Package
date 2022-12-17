@@ -19,8 +19,7 @@ import 'package:Raven_BVN_VERF/raven_bvn_verifcation.dart';
                 
                 
              try {
-                  value = await RavenVer.bvnVerifcation(
-                    userToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                  value = await RavenVer.bvnVerifcation( 
                     context: context,
                     secretKey: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
                     bvn: "1000000001",
@@ -96,8 +95,7 @@ class _RevenApp extends State<RevenApp> {
           ElevatedButton(
               onPressed: () async {
                 try {
-                  value = await RavenVer.bvnVerifcation(
-                    userToken: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                  value = await RavenVer.bvnVerifcation( 
                     context: context,
                     secretKey: "ZYXWVUTSRQPOMNLKJIHGFEDCBA",
                     bvn: "1000000001",
